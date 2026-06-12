@@ -3,12 +3,14 @@ import java.util.Scanner;
 public class ValidacaoSenha {
     static void main() {
         Scanner scanner = new Scanner(System.in);
-        int senhaDefinida = 123456;
+        String senhaDefinida = "123456";
 
         System.out.println("Digite a senha: ");
-        int senhaDigitada = scanner.nextInt();
+        String senhaDigitada = scanner.nextLine();
 
-        if (senhaDigitada == senhaDefinida ) {
+        scanner.close();
+
+        if (senhaDigitada.equals(senhaDefinida) ) {
             System.out.println("Acesso Permitido!");
         } else {
             System.out.println("Acesso Negado!");
